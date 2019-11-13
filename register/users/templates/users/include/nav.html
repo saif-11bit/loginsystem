@@ -1,0 +1,22 @@
+<nav id="nav">
+        <ul class="nav nav-pills nav-fill bg" id="nav">
+          <li class="nav-item mx-2 my-2">
+            <a class="nav-link active" href="/">HOME</a>
+          </li>
+          {% if user.is_authenticated %}
+            <li class="nav-item mx-2 my-2 bg-dark">
+              <a class="nav-link active" href="/account"><strong>{{user.username}}</strong></a>
+            </li>
+            <li class="nav-item mx-2 my-2 bg-dark">
+              <a class="nav-link active" href="/logout">LOG OUT</a>
+            </li>
+          {% else %}
+            <li class="nav-item mx-2 my-2 bg-dark">
+              <a class="nav-link active" href="/register">SIGN UP</a>
+            </li>
+            <li class="nav-item mx-2 my-2 bg-dark">
+              <a class="nav-link active" href="/login">LOG IN</a>
+            </li>
+          {% endif %}
+        </ul>
+    </nav>

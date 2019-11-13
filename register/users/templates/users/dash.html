@@ -1,0 +1,43 @@
+{% extends 'users/layout.html' %}
+
+{% block title %}
+dashboard
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+        <!-- page-content  -->
+        <main class="page-content pt-2">
+            <div id="overlay" class="overlay"></div>
+            <div class="container-fluid p-5">
+                <div class="row">
+                        <h1> Dashboard</h1>
+                                
+
+                    <div class="form-group col-md-12">
+                        <a id="toggle-sidebar" class="btn btn-secondary rounded-0" href="#">
+                            <span>Toggle Sidebar</span>
+                        </a>
+                        <a id="pin-sidebar" class="btn btn-outline-secondary rounded-0" href="#">
+                            <span>Pin Sidebar</span>
+                        </a>
+
+                    </div>
+                    <h1>Hello, {{user.username}}</h1>
+                    <div class="form-group col-md-12">
+                          <h3>
+                              This is your email {{user.email}}
+                          </h3> 
+                        </div>
+                </div>
+                
+
+               
+
+                </div>
+            </div>
+        </main>
+        <!-- page-content" -->
+    {% endblock %}
